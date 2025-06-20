@@ -1,7 +1,7 @@
 import redis
 import os
-from ocr_operations import PDFExtractor  #
-
+from ocr_operations import PDFExtractor 
+import pickle
 
 extractor = PDFExtractor(file_path="OCR Test Template (1) (1).pdf")
 
@@ -19,3 +19,6 @@ r.set("claims_data", claims_df.to_json(orient="records"))
 r.set("benefits_data", benefits_df.to_json(orient="records"))
 
 print("Data saved to Redis.")
+
+with open("dataframes.txt", "wb") as f:
+    pickle.dump({"claims": claims_df, "benefits": benefits_df}, f)
