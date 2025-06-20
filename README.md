@@ -5,7 +5,7 @@ This app extracts and processes insurance claims and benefits data from PDF file
 
 ---
 
-## 🔧 How It Works
+## How It Works
 
 1. Parses metadata, claims, and benefits from a PDF.
 2. Cleans and formats the extracted data.
@@ -13,7 +13,7 @@ This app extracts and processes insurance claims and benefits data from PDF file
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 ### With Docker Compose
 
@@ -29,3 +29,4 @@ Run the app and Redis
 Process the sample PDF
 
 Save results to Redis
+
